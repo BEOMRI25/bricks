@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background-image: url('/img/8-bit-sky.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block-start: 12rem;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.bricks {
+  width: 100%;
+  display: grid;
+  gap: .2rem;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  transform: rotateX(180deg);
+}
+
+.brick {
+  height: 2rem;
+  background-color: #AA4A44;
+  border-block-start: .4rem solid rgba(255,255,255,0.3);
+  border-block-end: .4rem solid rgba(0,0,0,0.3);
+  border-inline-start: .4rem solid rgba(255,255,255,0.3);
+  border-inline-end: .4rem solid rgba(0,0,0,0.3);
+  box-shadow: 0 0 0 .2rem black;
+  transform: rotateX(180deg);
+}
+
+.brick.special {
+  background-color: burlywood;
+}
+
+.interface {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  background-color: orange;
+  padding: .4em .8em;
+  border-block-start: .4em solid rgba(255, 255, 255, 0.3);
+  border-block-end: .4em solid rgba(0, 0, 0, 0.3);
+  border-inline-start: .4em solid rgba(255, 255, 255, 0.3);
+  border-inline-end: .4em solid rgba(0, 0, 0, 0.3);
+  outline: .06em solid black;
+  text-shadow: 0 0 .08em black;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+button {
+  color: white;
+  font-size: 1rem;
+  font-weight: 900;
+  background-color: #AA4A44;
+  width: 6rem;
+  height: 4rem;
+  border-block-start: .6em solid rgba(255, 255, 255, 0.3);
+  border-block-end: .6em solid rgba(0, 0, 0, 0.3);
+  border-inline-start: .6em solid rgba(255, 255, 255, 0.3);
+  border-inline-end: .6em solid rgba(0, 0, 0, 0.3);
+  outline: .175em solid black;
+  text-shadow: 0 0 .08em black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  transform: translateY(-.1em);
+}
+
+button:active {
+  transform: translateY(.1em);
+}
+
+#reset {
+  background-color: darkgray;
+}
+
+#start {
+  background-color: rgb(126, 173, 113);
+}
+
+#start.on {
+  background-color: darkgray;
+}
